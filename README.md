@@ -1,7 +1,7 @@
 # Predictive-Stanley-Control-for-Tractor-Path-Tracking
 本科毕设，《拖拉机路径跟踪的预测 Stanley 控制方法》的仿真部分。
 
-`stanley.slx`是Simulink的模型文件（内含已注释掉的CarSim模块的废案），里面有S-Function模块（PStanley和Stanley），分别连接着对应的s-function m代码文件`predictiveStanleyControlSFunction`和`stanleyControlSFunction.m`。这两个m文件里可以导入`u.txt`或`str.txt`两种路径，在每一个离散时间通过当前车辆离目标位置和航向角的偏差，来算横向误差和航向误差，运用预测Stanley或者Stanley控制方法来输出轮转角以及计算的误差。在模型文件中，可以设置这两个S-Function模块的参数。在仿真结束时，还会输出各类数据到MATLAB基础工作区中，以及存到以方法和路径缩写为前缀后跟多个参数并用下划线分隔为名的mat文件中。
+`stanley.slx`是Simulink的模型文件（内含已注释掉的CarSim模块的废案），里面有S-Function模块（PStanley和Stanley），分别连接着对应的s-function m代码文件`predictiveStanleyControlSFunction.m`和`stanleyControlSFunction.m`。这两个m文件里可以导入`u.txt`或`str.txt`两种路径，在每一个离散时间通过当前车辆离目标位置和航向角的偏差，来算横向误差和航向误差，运用预测Stanley或者Stanley控制方法来输出轮转角以及计算的误差。在模型文件中，可以设置这两个S-Function模块的参数。在仿真结束时，还会输出各类数据到MATLAB基础工作区中，以及存到以方法和路径缩写为前缀后跟多个参数并用下划线分隔为名的mat文件中。
 
 `generateStrRoad.m`是输出`str.txt`的代码文件，`generateURoad.m`是输出`u.txt`的代码文件。
 
